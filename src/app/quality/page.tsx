@@ -1,0 +1,6 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageHero, ContactBand, SectionHead, Button } from "@/components/ui";
+import { VerificationGrid } from "@/components/verification-grid";
+import { QUALITY_AREAS } from "@/lib/data/platform";
+export const metadata = pageMetadata("Quality", "EonTera quality documentation hub for quality control, testing, manufacturing standards, compliance and certifications.", "/quality/");
+export default function Page(){ return <><PageHero eyebrow="QUALITY / CONTROLLED DISCLOSURE" title={<>Evidence before<br/><em>claims.</em></>} text="This section is structured for EonTera’s approved quality processes, laboratory information, testing records, standards and certifications. Unverified claims are intentionally not published."/><section className="section"><div className="container"><SectionHead eyebrow="QUALITY FRAMEWORK" title={<>One place for<br/><em>verified evidence.</em></>} text="Each topic below is ready to receive company-approved documentation."/><VerificationGrid items={QUALITY_AREAS}/><div className="technical-note"><h3>Need approved technical documentation now?</h3><p>Contact the team for the current documents applicable to your product or project.</p><Button href="/contact/?interest=Technical%20documentation">Request documentation</Button></div></div></section><ContactBand/></> }
